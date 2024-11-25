@@ -1,0 +1,249 @@
+/* General styles */
+body {
+    margin: 0;
+    font-family: Arial, sans-serif;
+    background-color: #121212; /* Dark background */
+    color: #fff; /* Light text color */
+  }
+  
+  .main-container {
+    width: 800px; /* Fixed screen size */
+    height: 480px; /* Fixed screen size */
+    display: flex;
+    flex-direction: column;
+    justify-content: space-between;
+    border: 2px solid #333; /* Optional border for visibility */
+    margin: 20px auto; /* Centered on page */
+    background-color: black; /* Slightly lighter dark background */
+    border-radius: 10px;
+    overflow: hidden;
+  }
+  
+  .content-area {
+    flex: 1;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    padding: 10px;
+  }
+  
+/* Bottom Navigation Bar */
+.bottom-nav {
+    display: flex;
+    align-items: center;
+    margin-bottom: 10px;
+    margin-left: 10px;
+    margin-right: 10px;
+    justify-content: space-between;
+    background-color: #191919; /* Black background */
+    height: 60px;
+    padding: 0 15px;
+    border-radius: 30px;
+    border: 1px solid #333; /* Optional border */
+    color: white;
+  }
+  
+  .nav-icon {
+    background: none;
+    border: none;
+    color: white;
+    font-size: 25px;
+    cursor: pointer;
+    padding: 10px;
+    transition: background-color 0.2s, transform 0.1s;
+    border-radius: 50%;
+  }
+  
+  .nav-icon:hover {
+    background-color: #333; /* Highlight on hover */
+    transform: scale(1.1); /* Slight zoom */
+  }
+  
+  .nav-info {
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    font-size: 18px;
+    color: #ccc;
+  }
+  
+  /* Active button styling */
+  .nav-icon.active {
+    background-color: white; /* White background */
+    color: black; /* Black icon */
+  }
+  
+  .nav-time {
+    font-size: 16px;
+    color: #ccc;
+    margin-left: 10px;
+  }
+  
+/* Home Screen Layout */
+.home-screen {
+  display: flex;
+  height: 100%;
+  color: white;
+}
+
+/* Left Section */
+.home-left-section {
+  flex: 1; /* Take all available space */
+  display: flex;
+  flex-direction: column;
+  justify-content: space-between;
+  padding: 20px;
+  padding-bottom: 0;
+}
+
+/* Car Status Container */
+.car-status {
+  display: flex;
+  flex-direction: column;
+  justify-content: flex-start;
+  align-items: center;
+  gap: 10px; /* Spacing between rows */
+}
+
+/* Speed and Battery Alignment */
+.status-row {
+  display: flex;
+  justify-content: space-between;
+  width: 100%; /* Full width for alignment */
+  padding: 0 10px; /* Add padding for spacing */
+}
+
+.speed {
+  font-size: 40px;
+  font-weight: bold;
+}
+
+.speed small {
+  font-size: 20px;
+}
+
+.battery {
+  font-size: 18px;
+  color: #0f0;
+  display: flex;
+  margin-top: 10px;
+  align-items: flex-start;
+  gap: 5px; /* Add space between text and icon */
+}
+
+/* Gear Display */
+.gear-row {
+  display: flex;
+  gap: 10px; /* Add space between gears */
+}
+
+.gear-active {
+  font-size: 28px;
+  font-weight: bold;
+  color: white; /* Active gear color */
+}
+
+.gear-inactive {
+  font-size: 20px;
+  color: #555; /* Faded color for inactive gears */
+}
+
+/* Car Image */
+.car-image {
+  margin-top: 10px;
+}
+
+.car-img {
+  width: 100%;
+  height: auto;
+  object-fit: contain; /* Maintain aspect ratio */
+}
+
+
+/* Music Widget */
+.music-widget {
+  display: flex;
+  align-items: center;
+  background-color: #191919; /* Darker background */
+  padding: 10px;
+  border-radius: 8px;
+  box-shadow: 0 0 5px rgba(0, 0, 0, 0.8); /* Subtle shadow for depth */
+  overflow: hidden; /* Prevent content overflow */
+}
+
+.album-art {
+  width: 50px;
+  height: 50px;
+  margin-right: 10px;
+  border-radius: 5px;
+  object-fit: cover; /* Ensure album art looks consistent */
+}
+
+.music-info {
+  flex: 1;
+  display: flex;
+  align-items: center;
+  justify-content: space-between;
+}
+
+.scrolling-text {
+  position: relative;
+  width: 150px; /* Visible area width */
+  height: 50px; /* Ensure height for the text */
+  overflow: hidden; /* Hide overflow text */
+}
+
+.scrolling-text p {
+  position: absolute;
+  white-space: nowrap;
+  transform: translateX(100%); /* Start outside the container */
+  animation: scrollText 8s linear infinite; /* Infinite scrolling animation */
+}
+
+@keyframes scrollText {
+  0% {
+    transform: translateX(100%); /* Start from the right */
+  }
+  100% {
+    transform: translateX(-150%); /* Exit to the left */
+  }
+}
+
+.controls {
+  display: flex;
+  align-items: center;
+  gap: 10px;
+}
+
+.controls button {
+  background: none;
+  border: none;
+  color: white; /* White icons */
+  font-size: 20px;
+  cursor: pointer;
+  padding: 5px;
+  border-radius: 50%;
+  transition: background-color 0.2s, transform 0.2s;
+}
+
+.controls button:hover {
+  background-color: #333; /* Highlight on hover */
+  transform: scale(1.1); /* Slight zoom */
+}
+
+
+/* Right Section */
+.right-section {
+  flex: 1; /* Take all available space */
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  padding: 0; /* Remove padding for full map stretch */
+}
+
+.right-section iframe {
+  width: 100%; /* Make iframe fill the container */
+  height: 100%; /* Make iframe fill the container */
+  border-radius: 10px;
+  border: none; /* Clean up borders */
+}

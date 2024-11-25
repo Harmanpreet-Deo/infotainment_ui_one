@@ -1,0 +1,72 @@
+.keypad-section {
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    justify-content: center;
+    gap: 20px;
+    height: 100%;
+  }
+  
+  .keypad-keys {
+    display: grid;
+    grid-template-columns: repeat(3, 1fr);
+    gap: 10px;
+    width: 200px; /* Fixed width for alignment */
+  }
+  
+  .keypad-key {
+    background-color: #222;
+    color: white;
+    border: none;
+    padding: 15px;
+    font-size: 20px;
+    text-align: center;
+    border-radius: 10px;
+    cursor: pointer;
+    transition: background-color 0.3s ease, transform 0.2s;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+  }
+  
+  .keypad-key:hover {
+    background-color: #333;
+    transform: scale(1.05);
+  }
+  
+  .keypad-actions {
+    display: flex;
+    justify-content: center;
+    gap: 15px;
+    width: 100%;
+  }
+  
+  .action-button {
+    background-color: green;
+    color: white;
+    border: none;
+    padding: 15px 25px;
+    font-size: 18px;
+    border-radius: 12px;
+    cursor: pointer;
+    transition: background-color 0.3s ease, transform 0.2s;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    gap: 10px;
+  }
+  
+  .action-button:hover {
+    background-color: #666;
+    transform: scale(1.05);
+  }
+  
+  .backspace-button {
+    background-color: #222;
+    color: red;
+  }
+  
+  .backspace-button:hover {
+    background-color: #333;
+  }
+  

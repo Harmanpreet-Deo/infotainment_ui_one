@@ -1,0 +1,214 @@
+/* General Layout */
+.music-section {
+  position: relative;
+    display: flex;
+    height: 388px;
+    width: 100%;
+    color: white;
+    background-color: black;
+  }
+  
+/* Battery Icon for Music Section */
+.battery-icon-music {
+  position: absolute;
+  top: 10px;
+  right: 10px;
+  font-size: 14px;
+  color: white;
+}
+
+
+  /* Sidebar */
+  .sidebar {
+    width: 195px;
+    display: flex;
+    flex-direction: column;
+    padding: 20px;
+    padding-right: 0;
+  }
+  
+.music-search-bar {
+  display: flex;
+  align-items: center;
+  background-color: #191919; /* Match sidebar background */
+  border: 1px solid #333;
+  border-radius: 8px;
+  padding: 0px 12px; /* Increase padding for better spacing */
+  gap: 8px; /* Space between icons and input */
+  margin-bottom: 20px;
+  height: 40px; /* Ensure enough height for the icons */
+}
+
+.music-search-bar input {
+  flex: 1;
+  border: none;
+  background: none;
+  color: white;
+  font-size: 14px;
+  outline: none;
+}
+
+.icon {
+  font-size: 18px; /* Adjust size to fit within the bar */
+  color: white;
+  flex-shrink: 0; /* Prevent the icons from shrinking */
+}
+
+  
+  .menu {
+    display: flex;
+    flex-direction: column;
+    gap: 10px;
+  }
+  
+  .menu-item {
+    background-color: black;
+    border: none;
+    padding: 10px;
+    border-radius: 5px;
+    color: white;
+    text-align: left;
+    display: flex;
+    align-items: center;
+    gap: 10px;
+    cursor: pointer;
+    transition: background-color 0.3s;
+  }
+  
+  .menu-item:hover {
+    background-color: #333;
+  }
+  
+  /* Playlist View */
+  .playlist-view {
+    width: 250px;
+    padding: 20px;
+    display: flex;
+    flex-direction: column;
+    gap: 10px;
+    background-color: black;
+  }
+  
+  .playlist-title {
+    font-size: 18px;
+    margin-top: 10px;
+    font-weight: bold;
+    margin-bottom: 10px;
+  }
+  
+  .song-list {
+    list-style: none;
+    padding: 0;
+    margin: 0;
+  }
+  
+  .song-item {
+    padding: 10px;
+    background-color: #191919;
+    border-radius: 5px;
+    margin-bottom: 5px;
+    cursor: pointer;
+    transition: background-color 0.3s;
+  }
+  
+  .song-item:hover {
+    background-color: #333;
+  }
+  
+  /* Music Player */
+  .player {
+    width: 390px;
+    margin-top: 25px;
+    display: flex;
+    flex-direction: column;
+    padding: 20px;
+    background-color: #191919;
+    border-radius: 25%;
+    align-items: center;
+    gap: 10px;
+    margin-right: 20px;
+  }
+  
+  .player-header {
+    display: flex;
+    gap: 10px;
+  }
+  
+  .player-header .icon {
+    font-size: 24px;
+    cursor: pointer;
+    transition: transform 0.3s;
+  }
+  
+  .player-header .icon:hover {
+    transform: scale(1.2);
+  }
+  
+  .player-content {
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    gap: 10px;
+  }
+  
+  .album-cover {
+    margin-top: 15px;
+    width: 100px;
+    height: 100px;
+    border-radius: 10px;
+  }
+  
+  .song-info {
+    text-align: center;
+  }
+  
+  .song-title {
+    font-weight: bold;
+  }
+  
+  .player-controls {
+    margin-top: 10px;
+    display: flex;
+    gap: 15px;
+  }
+  
+  .music-control-button {
+    background-color: #333;
+    border: none;
+    border-radius: 50%;
+    width: 50px;
+    height: 50px;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    cursor: pointer;
+    color: white;
+    font-size: 20px;
+    transition: background-color 0.3s, transform 0.2s;
+  }
+  
+  .music-control-button:hover {
+    background-color: #555;
+    transform: scale(1.1);
+  }
+  
+/* Volume Control */
+.volume-control {
+    display: flex;
+    margin-top: 15px;
+    flex-direction: column;
+    align-items: center;
+    gap: 5px;
+  }
+  
+  .volume-control input {
+    width: 100%;
+    accent-color: #00aaff; /* Same slider color */
+  }
+  
+  .volume-text {
+    font-size: 14px;
+    color: white;
+    font-weight: bold;
+  }
+  

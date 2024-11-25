@@ -1,0 +1,272 @@
+/* General Layout */
+.vehicle-settings {
+  position: relative;
+  display: flex;
+  height: 388px;
+  width: 90%;
+  color: white;
+  padding: 20px;
+  gap: 20px;
+  box-sizing: border-box;
+}
+
+.battery-icon-vehicle {
+  position: absolute;
+  top: 10px;
+  right: 0px;
+  font-size: 20px;
+  color: white;
+}
+
+
+/* Vertical Slider Container */
+.vertical-slider-container {
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  gap: 15px; /* Increased spacing to prevent overlap */
+}
+
+.slider-icon {
+  font-size: 48px; /* Slightly larger bulb */
+  transition: filter 0.3s, color 0.3s;
+}
+
+.vertical-slider {
+  writing-mode: bt-lr; /* Rotate slider to vertical */
+  transform: rotate(270deg);
+  width: 150px; /* Increased height for better usability */
+  cursor: pointer;
+  accent-color: #ffcc00; /* Customize slider color */
+}
+
+.light-percentage {
+  font-size: 16px;
+  color: white;
+  margin-top: 5px; /* Added spacing below slider */
+}
+
+
+
+/* Left Section */
+.left-section {
+  flex: 1;
+  display: flex;
+  flex-direction: column;
+  justify-content: space-between;
+  border: none;
+  padding-top: 30px;
+  margin-right: 50px;
+}
+
+.controls-list {
+  display: flex;
+  flex-direction: column;
+  gap: 10px;
+}
+
+.control-button {
+  display: flex;
+  flex-direction: row;
+  align-items: center;
+  justify-content: space-between;
+  background-color: #191919;
+  padding: 15px;
+  border-radius: 12px;
+  border: none;
+  color: white;
+  cursor: pointer;
+  font-size: 16px;
+  transition: background-color 0.3s, transform 0.2s;
+}
+
+.control-button:hover {
+  background-color: #333;
+}
+
+.control-button.active {
+  background-color: white;
+  color: black;
+}
+
+/* Center Section */
+.center-section {
+  flex: 2;
+  display: flex;
+  justify-content: center;
+  align-items: center;
+}
+
+.car-view {
+  max-width: 100%;
+  height: 350px;
+  border-radius: 10px;
+  object-fit: cover;
+}
+
+/* Right Section */
+.right-section {
+  flex: 1;
+  min-width: 196px;
+  display: flex;
+  flex-direction: column;
+  gap: 20px;
+  justify-content: center;
+  align-items: center;
+}
+
+/* Seat Adjustment Grid */
+.seating-controls .seat-adjustment-grid {
+  display: grid;
+  grid-template-columns: repeat(2, 1fr);
+  gap: 10px;
+}
+
+.seat-button {
+  background-color: #191919;
+  border: none;
+  border-radius: 8px;
+  width: 60px;
+  height: 60px;
+  color: white;
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  cursor: pointer;
+  font-size: 20px;
+  transition: all 0.2s;
+}
+
+.seat-button:hover {
+  background-color: #333;
+  transform: scale(1.1);
+}
+
+/* Seat Temperature Controls */
+.seating-controls .seat-temperature-controls {
+  display: flex;
+  align-items: center;
+  gap: 20px;
+}
+
+.seat-temp-button {
+  background-color: #191919;
+  border-radius: 50%;
+  width: 50px;
+  height: 50px;
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  font-size: 18px;
+  cursor: pointer;
+  transition: background-color 0.3s, transform 0.2s;
+}
+
+.seat-temp-button:hover {
+  background-color: #333;
+  transform: scale(1.1);
+}
+
+.seat-temp-display {
+  font-size: 16px;
+  color: #ccc;
+  font-weight: bold;
+}
+
+/* Temperature Controls */
+.temperature-control {
+  display: flex;
+  align-items: center;
+  gap: 10px;
+}
+
+.temperature-arrow {
+  background-color: #191919;
+  border: none;
+  border-radius: 50%;
+  width: 50px;
+  height: 50px;
+  color: white;
+  font-size: 20px;
+  cursor: pointer;
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  transition: background-color 0.3s, transform 0.2s;
+}
+
+.temperature-arrow:hover {
+  background-color: #333;
+  transform: scale(1.1);
+}
+
+.temperature-display {
+  font-size: 16px;
+  color: white;
+  font-weight: bold;
+}
+/* Airflow Controls */
+.airflow-controls {
+display: flex;
+flex-direction: column;
+gap: 20px;
+align-items: center;
+}
+
+.airflow-toggle-button {
+background-color: #191919;
+border: none;
+border-radius: 12px;
+padding: 15px 20px;
+color: white;
+font-size: 16px;
+cursor: pointer;
+display: flex;
+flex-direction: column;
+align-items: center;
+justify-content: center;
+transition: background-color 0.3s, transform 0.2s;
+gap: 5px;
+}
+
+.airflow-toggle-button.heat-mode {
+background-color: #ff6600; /* Heat: Orange */
+color: black;
+}
+
+.airflow-toggle-button.cool-mode {
+background-color: #00aaff; /* Cool: Blue */
+color: black;
+}
+
+.airflow-toggle-button:hover {
+background-color: #333;
+transform: scale(1.1);
+}
+
+/* Fan Buttons */
+.fan-buttons {
+display: flex;
+flex-direction: column;
+gap: 10px;
+}
+
+.climate-button {
+background-color: #191919;
+border: none;
+border-radius: 50%;
+width: 50px;
+height: 50px;
+color: white;
+font-size: 18px;
+cursor: pointer;
+display: flex;
+justify-content: center;
+align-items: center;
+transition: background-color 0.3s, transform 0.2s;
+}
+
+.climate-button:hover {
+background-color: #333;
+transform: scale(1.1);
+}
